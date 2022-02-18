@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+
+<html>
+    <!--Beginning of head-->
+    <head>
+        <meta charset="utf-8">
+        <style>
+          body {
+            background-color: rgb(22, 82, 14);
+          }
+          header {
+            font-size: 75px;
+            text-align: center;
+            color: white;
+          }
+          img {
+            width: 650px;
+            height: 650px;
+          }
+          h1 {
+            font-size: 50px;
+            text-align: center;
+            color: white;
+          }
+          div.center {
+            display: flex;
+            justify-content: center;
+          }
+          div.box {
+            width: 200px;
+            height: 150px;
+            outline-width: 2px;
+            vertical-align: middle;
+            outline-style: solid;
+            justify-content: space-around;
+            display: flex;
+          }
+        </style>
+    </head>
+
+    <!--Beginning of body-->
+    <body>
+        <!--From user -> 'Bean', website found -> 'pngset' -->
+        <header>
+            CONGRADULATIONS
+        </header>
+        <br />
+        <header>
+            YOU WON!
+        </header>
+        <div>
+            <img style="float: left" src="..\\static\\party_popper.png" />
+        </div>
+        <div>
+            <img style="float: right" src="..\\static\\party_popper_2.png" />
+        </div>
+        <h1>
+            Continue?
+        </h1>
+        <br />
+        <div class="center">
+            <input type="submit" id="box" value="YES"/>
+            <input type="submit" id="box" value="NO"/>
+        </div>
+    </body>
+</html>

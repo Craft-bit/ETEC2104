@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <meta charset=utf8>
+    <style>
+        div.background {
+            background-color: rgb(23, 93, 139);
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            display: flex;
+        }
+
+        div.login_box {
+            background-color: rgb(119, 185, 230);
+            vertical-align: middle;
+            outline-width: 3px;
+            outline-style: solid;
+            height: 160px;
+            width: 260px;
+            margin: 20%;
+        }
+
+        div.center {
+            display: flex; 
+            justify-content: center; 
+            width: 100%;
+            padding: 4px;
+        }
+
+        div.input_box {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        
+        <div class="center">
+                <div class="login_box">
+                    <div class="login_text center">
+                        <span style="font-weight:900; font-size: 40pt;">Login</span>
+                    </div>
+                    <div  class="center input_box">
+                        Username
+                        <input type="text" id="username_text">
+                    </div>
+                    <div  class="center input_box">
+                        Password
+                        <input type="text" id="password_text">
+                    </div>
+                    <div class="center">
+                        <input type="submit" id="login_button" , value="Login">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
