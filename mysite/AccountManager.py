@@ -1,5 +1,3 @@
-from asyncio.windows_events import NULL
-
 accounts = {}
 
 class AccountError(Exception):

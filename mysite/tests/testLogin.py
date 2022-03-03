@@ -1,11 +1,10 @@
-from unittest import TestCase
+"""from unittest import TestCase
 import http
 import django.test
 import tests.utils as utils
 
 
 class T(TestCase):
-    """
     decode() : 
     * difference between strings and bytes
         ** strings -> character data
@@ -14,7 +13,6 @@ class T(TestCase):
         ** could be text based
         ** could be an image
     * decode converts the resource from bytes into strings
-    """
     def test_notLoggedIn(self):
         # Runs as test, not actual browser
         c = django.test.Client()
@@ -33,4 +31,4 @@ class T(TestCase):
         uname = resp.client.get("/who").content.decode()
         self.assertNotEqual(uname, "desmond@foo.com")
 
-    
+    """

@@ -19,11 +19,13 @@ import src.home     # import module we created
 import src.about
 import src.register
 import src.user
+import src.new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', src.home.showHomePage),            # Goes to home page
     path('about', src.about.view),              # Goes to about page
     path('register', src.register.register),
-    path('who', src.user.getuser)
+    path('who', src.user.getuser),
+    path('new', src.new.JSPractice)
 ]

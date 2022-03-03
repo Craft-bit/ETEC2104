@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD-->
+    <head>
+        <meta charset="uft-8"/>
+        <!--
+            fixed occupies as much space as it requires
+        -->
+        <style>
+
+            /* CARD TABLE */
+
+            /* position: fixed occupies as much space as it requires
+               left ... bottom: covers the whole screen green */
+            div.cardtable {
+                background: #008000;
+                position: fixed;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+            }
+
+            /* CARDS */
+
+            /* North - South hand div class : Row from left to right */
+            div.horizontal-hand {
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+
+            /* East - West hand div class : Column from top to bottom */
+            div.vertical-hand {
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+
+            /* North - South play */
+            div.ns-play {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* East - West play */
+            div.ew-play {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+            }
+
+            /* South / player hand (bound to bottom) */
+            div.south-hand {
+                bottom: 0px;
+            }
+            div.south-play {
+                bottom: 35vh;
+            }
+    
+            /* North / opponent hand (bound to top) */
+            div.north-hand {
+                top: 0px;
+            }
+            div.north-play {
+                top: 35vh;
+            }
+
+            /* East / opponent hand (bound to right) */
+            div.east-hand {
+                right: 0px;
+            }
+            div.east-play {
+                right: 40vw;
+            }
+
+            /* West / opponent hand (bound to left) */
+            div.west-hand {
+                left: 0px;
+            }
+            div.west-play {
+                left: 40vw;
+            }
+
+            /* ANIMATIONS */
+            div.played {
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease;
+            }
+
+            /* South play animation */
+            div.south-play {
+                animation-name: southslide;
+            }
+            @keyframes southslide {
+                from {
+                    bottom: 0vh;
+                }
+                to {
+                    bottom: 35vh;
+                }
+            }
+            div.north-play {
+                animation-name: northslide;
+            }
+            @keyframes northslide {
+                from {
+                    top: 0vh;
+                }
+                to {
+                    top: 35vh;
+                }
+            }
+            div.east-play {
+                animation-name: eastslide;
+            }
+            @keyframes eastslide {
+                from {
+                    right: 0vw;
+                }
+                to {
+                    right: 40vw;
+                }
+            }
+            div.west-play {
+                animation-name: westslide;
+            }
+            @keyframes westslide {
+                from {
+                    left: 0vw;
+                }
+                to {
+                    left: 40vw;
+                }
+            }
+
+        </style>
+    </head>
+
+    <!--BODY-->
+    <body>
+        <div class="cardtable">
+
+            <!--The players hand | southern-->
+            <div class="south-hand horizontal-hand">
+                <img src="..\\static\\13s_0.svg">
+                <img src="..\\static\\13s_0.svg">
+                <img src="..\\static\\13s_0.svg">
+                <img src="..\\static\\13s_0.svg">
+                <img src="..\\static\\13s_0.svg">
+            </div>
+            <div class="south-play ns-play played">
+                <img src="..\\static\\2s_0.svg">
+            </div>
+
+            <!--Opponent's hand | northern-->
+            <div class="north-hand horizontal-hand">
+                <img src="..\\static\\back_180.svg">
+                <img src="..\\static\\back_180.svg">
+                <img src="..\\static\\back_180.svg">
+                <img src="..\\static\\back_180.svg">
+                <img src="..\\static\\back_180.svg">
+            </div>
+            <div class="north-play ns-play played">
+                <img src="..\\static\\8h_180.svg">
+            </div>
+
+            <!--Opponent's hand | eastern-->
+            <div class="east-hand vertical-hand">
+                <img src="..\\static\\back_90.svg">
+                <img src="..\\static\\back_90.svg">
+                <img src="..\\static\\back_90.svg">
+                <img src="..\\static\\back_90.svg">
+                <img src="..\\static\\back_90.svg">
+            </div>
+            <div class="east-play ew-play played">
+                <img src="..\\static\\4c_90.svg">
+            </div>
+
+            <!--Opponent's hand | western-->
+            <div class="west-hand vertical-hand">
+                <img src="..\\static\\back_270.svg">
+                <img src="..\\static\\back_270.svg">
+                <img src="..\\static\\back_270.svg">
+                <img src="..\\static\\back_270.svg">
+                <img src="..\\static\\back_270.svg">
+            </div>
+            <div class="west-play ew-play played">
+                <img src="..\\static\\6d_270.svg">
+            </div>
+
+        </div>
+    </body>
+
+</html>
