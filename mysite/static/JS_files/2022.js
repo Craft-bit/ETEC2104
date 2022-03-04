@@ -1,5 +1,7 @@
 // dictionary. key = rank, suit, angle
 let cards = {};
+let numCardsLeftToLoad = 13 * 4 * 4;
+let hand = [];
 
 function main()
 {
@@ -12,15 +14,27 @@ function main()
         {
             let suit = suits[si];
             angles.forEach( (angle) => {
-                let filename = "../static/Images/" + rank + suit + " " + angle + ".svg";
+                let filename = "../static/cards/" + rank + suit + " " + angle + ".svg";
                 let key = rank + suit + angle;
                 let img = new Image();
                 img.onload = () => {
                     cards[key] = img;
                     console.log("LOADED:", key);
+                    numCardsLeftToLoad -= 1;
+                    if (numCardsLeftToLoad === 0)
+                        doSomething();
                 };
                 img.src = filename;
             });
         }
     }
+}
+
+function doSomething()
+{
+    let c = cards["2c0"];
+    document.body.appendChild(c);
+    c.style.position = "absolute";
+    c.style.left = "0px";
+    c.style.bottom = "0px";
 }
